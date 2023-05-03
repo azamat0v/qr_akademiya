@@ -65,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
             TextField(
               controller: _usernameController,
               decoration: InputDecoration(
-                labelText: 'Username',
+                labelText: 'Foydalanuvchi nomi',
               ),
             ),
             SizedBox(height: 16.0),
@@ -73,13 +73,13 @@ class _LoginScreenState extends State<LoginScreen> {
               controller: _passwordController,
               obscureText: true,
               decoration: InputDecoration(
-                labelText: 'Password',
+                labelText: 'Parol',
               ),
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: _isLoading ? null : _login,
-              child: _isLoading ? CircularProgressIndicator() : Text('Login'),
+              child: _isLoading ? CircularProgressIndicator(color: Colors.brown,) : Text('Login'),
             ),
           ],
         ),
