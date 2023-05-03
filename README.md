@@ -1,16 +1,59 @@
-# qr_akademiya
 
-A new Flutter project.
+# Hi, I'm Abdullah! 👋
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# QR AKADEMIYA
 
-A few resources to get you started if this is your first Flutter project:
+QR registration app for shayx academy
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack
+
+**Client:** Dart, Flutter
+
+**Server:** Java, Spring
+
+
+## Used By
+
+This project is used by the following companies:
+
+- shayx academy
+
+
+## License
+
+
+
+
+
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/azamat0v/qr_akademiya.git
+```
+
+Go to the project directory
+
+```bash
+  cd qr_akademiya
+```
+
+Install dependencies
+
+```bash
+  pub get
+```
+
+Start the server
+
+```bash
+  flutter run
+```
+
