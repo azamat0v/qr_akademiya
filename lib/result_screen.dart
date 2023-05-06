@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:qr_akademiya/Controllers/api.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:qr_akademiya/qr_scanner.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 const btnColor = Color(0xffddb392);
 
-class ResultScreen extends StatelessWidget {
+class ResultScreen extends StatefulWidget {
   final String code;
   final Function closeScreen;
 
+  
+
   const ResultScreen(
       {super.key, required this.closeScreen, required this.code});
+
+  @override
+  State<ResultScreen> createState() => _ResultScreenState();
+}
+
+class _ResultScreenState extends State<ResultScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +29,7 @@ class ResultScreen extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            closeScreen();
+            widget.closeScreen();
             Navigator.pop(context);
           },
           icon: Icon(
@@ -41,11 +52,11 @@ class ResultScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            QrImage(
-              data: code,
-              size: 150,
-              version: QrVersions.auto,
-            ),
+            // QrImage(
+            //   data: code,
+            //   size: 150,
+            //   version: QrVersions.auto,
+            // ),
             Text(
               "Natija:",
               style: TextStyle(
@@ -58,7 +69,7 @@ class ResultScreen extends StatelessWidget {
               height: 10,
             ),
             Text(
-              code,
+              widget.code,
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Colors.black87,
@@ -66,6 +77,10 @@ class ResultScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            MyListView(),
             SizedBox(
               height: 10,
             ),
@@ -77,7 +92,7 @@ class ResultScreen extends StatelessWidget {
                   backgroundColor: btnColor,
                 ),
                 onPressed: () {
-                  Clipboard.setData(ClipboardData(text: code));
+                  Clipboard.setData(ClipboardData(text: widget.code));
                 },
                 child: Text(
                   "Nusxalash",

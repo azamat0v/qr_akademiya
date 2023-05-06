@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qr_akademiya/api_call.dart';
+import 'package:qr_akademiya/Controllers/api.dart';
 import 'package:qr_akademiya/first_screen.dart';
 import 'package:qr_akademiya/login.dart';
 import 'package:qr_akademiya/qr_scanner.dart';

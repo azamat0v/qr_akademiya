@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:qr_akademiya/first_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -50,7 +51,31 @@ class _LoginScreenState extends State<LoginScreen> {
       _isLoading = false;
     });
   }
+// get data
+  Future<List> getData() async{
 
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0c2htZXN0IiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9DTElFTlQifV0sImlhdCI6MTY4MzIwMTY5NSwiZXhwIjoxNjgzNTAxNjk1fQ.Hs5XjEQoe4ds3X_YzDYxgBHp7pTG3DpNLQFgFrUS-pc"';
+    final value = prefs.get(key ) ?? 0;
+
+    String myUrl = "https://namoz-qr-web-app-production.up.railway.app/students/";
+    http.Response response2 = await http.get(myUrl as Uri,
+        headers: {
+          'Accept':'application/json',
+          'Authorization' : 'Bearer $key'
+    });
+    if (response2.statusCode == 200) {
+      print("kirsa kk");
+      print(response2.body);
+    } else {
+      print("error xato");
+      print(response2.body);
+    }
+    return json.decode(response2.body);
+
+
+   print(response2.body); 
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,8 +103,14 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20)), 
+                ),
+                backgroundColor: Color.fromARGB(255, 221, 179, 146)
+              ),
               onPressed: _isLoading ? null : _login,
-              child: _isLoading ? CircularProgressIndicator(color: Colors.brown,) : Text('Login'),
+              child: _isLoading ? CircularProgressIndicator(color: Color.fromARGB(255, 221, 179, 146),) : Text('Login'),
             ),
           ],
         ),

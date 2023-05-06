@@ -29,7 +29,7 @@ class _firstScreenState extends State<firstScreen> {
         ),
         actions: [
           IconButton(
-              color: Colors.brown,
+              color: Color.fromARGB(255, 221, 179, 146),
               onPressed: () {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => LoginScreen()));
@@ -46,11 +46,12 @@ class _firstScreenState extends State<firstScreen> {
           children: [
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.brown,
+                backgroundColor: Color.fromARGB(255, 221, 179, 146),
                 shadowColor: Colors.black54,
                 elevation: 5,
               ),
               onPressed: () {
+                // String bomdod = 'bomdod';
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => QRScanner()));
               },
@@ -64,11 +65,12 @@ class _firstScreenState extends State<firstScreen> {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.brown,
+                backgroundColor: Color.fromARGB(255, 221, 179, 146),
                 shadowColor: Colors.black54,
                 elevation: 5,
               ),
               onPressed: () {
+                String peshin = "Peshin";
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => QRScanner()));
               },
@@ -82,11 +84,12 @@ class _firstScreenState extends State<firstScreen> {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.brown,
+                backgroundColor: Color.fromARGB(255, 221, 179, 146),
                 shadowColor: Colors.black54,
                 elevation: 5,
               ),
               onPressed: () {
+                String asr = 'asr';
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => QRScanner()));
               },
@@ -100,11 +103,12 @@ class _firstScreenState extends State<firstScreen> {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.brown,
+                backgroundColor: Color.fromARGB(255, 221, 179, 146),
                 shadowColor: Colors.black54,
                 elevation: 5,
               ),
               onPressed: () {
+                String shom = 'shom';
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => QRScanner()));
               },
@@ -118,11 +122,12 @@ class _firstScreenState extends State<firstScreen> {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.brown,
+                backgroundColor: Color.fromARGB(255, 221, 179, 146),
                 shadowColor: Colors.black54,
                 elevation: 5,
               ),
               onPressed: () {
+                String xufton = 'xufton';
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => QRScanner()));
               },
