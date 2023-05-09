@@ -34,9 +34,9 @@ class _MyListViewState extends State<MyListView> {
 
   Future<void> _fetchData() async {
     var headers = {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0c2htZXN0IiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9DTElFTlQifV0sImlhdCI6MTY4MzIxMjkwNCwiZXhwIjoxNjgzNTEyOTA0fQ.R7aumrBkqXZrLlR5ED4vTtbVQlRIYI10wV4ZuRdnBec'
+        'Authorization': 'Bearer zI1NiJ9.eyJzdWIiOiJ0ZXN0c2htZXN0IiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9DTElFTlQifV0sImlhdCI6MTY4MzUzNjA1NywiZXhwIjoxNjgzODM2MDU3fQ.hJ4-97Na6uMXYtovszy1BsN5vq1KmSAu1-ZIFrzpvug'
       };
-    var request = http.Request('GET', Uri.parse('https://namoz-qr-web-app-production.up.railway.app/students/'));
+    var request = http.Request('GET', Uri.parse('https://example.com'));
 
     request.headers.addAll(headers);
 

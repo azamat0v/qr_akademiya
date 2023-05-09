@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginScreen(),
+      home: QRScanner(),
       debugShowCheckedModeBanner: false,
-      title: 'Shayx akademiyasi',
+      title: 'QR Scanner',
       theme: ThemeData(
           appBarTheme:
               AppBarTheme(backgroundColor: Colors.transparent, elevation: 0.0)),

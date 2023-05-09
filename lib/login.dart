@@ -25,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     final response = await http.post(
       Uri.parse(
-          'https://namoz-qr-web-app-production.up.railway.app/users/signin?password=$parol&username=$username'),
+          'https://example.com/signin?password=$parol&username=$username'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
@@ -55,17 +55,16 @@ class _LoginScreenState extends State<LoginScreen> {
   Future<List> getData() async{
 
     final prefs = await SharedPreferences.getInstance();
-    final key = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0c2htZXN0IiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9DTElFTlQifV0sImlhdCI6MTY4MzIwMTY5NSwiZXhwIjoxNjgzNTAxNjk1fQ.Hs5XjEQoe4ds3X_YzDYxgBHp7pTG3DpNLQFgFrUS-pc"';
+    final key = 'I1NiJ9.eyJzdWIiOiJ0ZXN0c2htZXN0IiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9DTElFTlQifV0sImlhdCI6MTY4MzUzNjA1NywiZXhwIjoxNjgzODM2MDU3fQ.hJ4-97Na6uMXYtovszy1BsN5vq1KmSAu1-ZIFrzpvug';
     final value = prefs.get(key ) ?? 0;
 
-    String myUrl = "https://namoz-qr-web-app-production.up.railway.app/students/";
+    String myUrl = "https://example.com";
     http.Response response2 = await http.get(myUrl as Uri,
         headers: {
           'Accept':'application/json',
           'Authorization' : 'Bearer $key'
     });
     if (response2.statusCode == 200) {
-      print("kirsa kk");
       print(response2.body);
     } else {
       print("error xato");

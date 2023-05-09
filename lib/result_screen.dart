@@ -39,7 +39,7 @@ class _ResultScreenState extends State<ResultScreen> {
         ),
         centerTitle: true,
         title: const Text(
-          "Shayx akademiyasi",
+          "QR Scanner",
           style: TextStyle(
               color: Colors.black87,
               fontSize: 18,

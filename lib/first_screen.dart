@@ -20,7 +20,7 @@ class _firstScreenState extends State<firstScreen> {
         iconTheme: IconThemeData(color: bgColor),
         centerTitle: true,
         title: const Text(
-          "Shayx akademiyasi",
+          "Namoz vaqtlari",
           style: TextStyle(
               color: Colors.black87,
               fontSize: 18,
